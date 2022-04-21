@@ -1,3 +1,4 @@
+import os
 import requests
 from os import path as osp
 
@@ -16,9 +17,11 @@ def create_model(args, is_train=False):
             model_path = f'pretrained_weights/act_{args.task}_x{args.scale}.pt'
             if not osp.exists(model_path):
                 # download pretrained weight
+                os.makedirs(osp.dirname(model_path), exist_ok=True)
                 url = f'https://github.com/jinsuyoo/ACT/releases/download/v0.0.0/{osp.basename(model_path)}'
                 r = requests.get(url, allow_redirects=True)
                 print(f'Downloading pretrained weight: {model_path}')
+                open(model_path, 'wb').write(r.content)
             
             net = ACT(args)
             net.load_state_dict(torch.load(model_path))

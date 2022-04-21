@@ -146,5 +146,6 @@ The codes are based on:
 - [Pretrained-IPT](https://github.com/huawei-noah/Pretrained-IPT) 
 - [ResizeRight](https://github.com/assafshocher/ResizeRight)
 - [vit-pytorch](https://github.com/lucidrains/vit-pytorch)
+- [SwinIR](https://github.com/JingyunLiang/SwinIR)
 
 Thanks for open sourcing such a wonderful works!
