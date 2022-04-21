@@ -1,0 +1,18 @@
+name: act
+channels:
+  - pytorch
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pip
+  - cudatoolkit=11.1
+  - pytorch=1.9.0
+  - torchvision=0.10.0
+  - pip:
+    - pytorch-lightning 
+    - imageio 
+    - scikit-image 
+    - einops 
+    - Pillow==6.1
+    - opencv-python
