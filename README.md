@@ -2,17 +2,18 @@
 
 This repository provide the code and model of our work:
 
-**Rich CNN-Transformer Feature Aggregation Networks for Super-Resolution** \
+**Enriched CNN-Transformer Feature Aggregation Networks for Super-Resolution** \
 Jinsu Yoo<sup>1</sup>, Taehoon Kim<sup>2</sup>, Sihaeng Lee<sup>2</sup>, Seung Hwan Kim<sup>2</sup>, Honglak Lee<sup>2</sup>, Tae Hyun Kim<sup>1</sup> \
 <sup>1</sup>Hanyang University, <sup>2</sup>LG AI Research \
-arXiv, 2022
+WACV 2023
 
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2203.07682)
 
-> Recent vision transformers along with self-attention have achieved promising results on various computer vision tasks. In particular, a pure transformer-based image restoration architecture surpasses the existing CNN-based methods using multi-task pre-training with a large number of trainable parameters.
-In this paper, we introduce an effective hybrid architecture for super-resolution (SR) tasks, which leverages local features from CNNs and long-range dependencies captured by transformers to further improve the SR results.
-Specifically, our architecture comprises of transformer and convolution branches, and we substantially elevate the performance by mutually fusing two branches to complement each representation.
-Furthermore, we propose a cross-scale token attention module, which allows the transformer to efficiently exploit the informative relationships among tokens across different scales.
+> Recent transformer-based super-resolution (SR) methods have achieved promising results against conventional CNN-based methods.
+However, these approaches suffer from essential shortsightedness created by only utilizing the standard self-attention-based reasoning.
+In this paper, we introduce an effective hybrid SR network to aggregate enriched features, including local features from CNNs and long-range multi-scale dependencies captured by transformers.
+Specifically, our network comprises transformer and convolutional branches, which synergetically complement each representation during the restoration procedure.
+Furthermore, we propose a cross-scale token attention module, allowing the transformer branch to exploit the informative relationships among tokens across different scales efficiently.
 Our proposed method achieves state-of-the-art SR results on numerous benchmark datasets.
 
 ## Table of Contents
@@ -130,11 +131,11 @@ python test.py --task sr
 If you find our work useful in your research, please consider citing our paper:
 
 ```bibtex
-@article{yoo2022act,
-  title={Rich CNN-Transformer Feature Aggregation Networks for Super-Resolution},
+@inproceedings{yoo2023act,
+  title={Enriched CNN-Transformer Feature Aggregation Networks for Super-Resolution},
   author={Yoo, Jinsu and Kim, Taehoon and Lee, Sihaeng and Kim, Seung Hwan and Lee, Honglak and Kim, Tae Hyun},
-  journal={arXiv preprint arXiv:2203.07682},
-  year={2022}
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+  year={2023}
 }
 ```
 
